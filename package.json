@@ -4,9 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "next",
-    "build": "NODE_ENV=production next build && NODE_ENV=production next export",
-    "deploy": "npm run build && npm run deploy:github",
-    "deploy:github": "touch out/.nojekyll && gh-pages -d out --dotfiles"
+    "build": "NODE_ENV=production next build"
   },
   "author": "",
   "license": "AGL3",
