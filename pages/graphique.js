@@ -96,10 +96,11 @@ function Graphique () {
               .join("rect")
                 .attr("x", (d, i) => x(d.data.name))
                 .attr("y", d => y(d[1]))
+                .attr("data-index", (d, i) => i)
                 .attr("height", d => y(d[0]) - y(d[1]))
                 .attr("width", x.bandwidth())
-                .on("mouseover", function(_, index) {
-                    setCurrentValues(data[index])
+                .on("mouseover", function(event) {
+                    setCurrentValues(data[event.target.dataset.index])
                 })
 
             svg.append("g")
