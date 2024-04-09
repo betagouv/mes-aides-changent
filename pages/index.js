@@ -28,7 +28,7 @@ function Index () {
               Accédez aux informations pour les cas types suivants&nbsp;:
             </p>
             <ul>
-              {list.map(i => (<li key={i.link}><Link href={`${config.assetPrefix}/graphique?source=${config.assetPrefix}/static/${i.link}`}><a>{i.name}</a></Link></li>))}
+              {list.map(i => (<li key={i.link}><Link href={`${config.assetPrefix}/graphique?source=${config.assetPrefix}/static/${i.link}`}>{i.name}</Link></li>))}
             </ul>
         </div>
     );
