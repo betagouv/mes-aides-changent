@@ -1,5 +1,4 @@
-name: Continuous deployment to github pages https://betagouv.github.io/mes-aides-analytics/
-
+name: Continuous deployment to github pages
 on:
   push:
     branches:

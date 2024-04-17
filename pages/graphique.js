@@ -72,9 +72,9 @@ function Graphique () {
             var xAxis = g => g
               .attr("transform", `translate(0,${height - margin.bottom})`)
               .call(d3.axisBottom(x).tickValues(data.map(function(d) {
-                var v = parseInt(d.salaire_net)
-                return v % 250 === 0 ? v : ''
-              })).tickSizeOuter(0))
+                var v = d.salaire_net
+                return v % 250 === 0 ? d.name : ''
+              }).filter(e => e.length)).tickSizeOuter(0))
               .call(g => g.selectAll(".domain").remove())
 
             var yAxis = g => g
